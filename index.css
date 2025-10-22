@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h3 {
+  text-align: center;
+  margin: 15px;
+}
+
+.customer-name {
+  font-weight: bold;
+}
+
+.container {
+  margin: auto;
+  width: 60%;
+  height: 100vh;
+  padding: 10px;
+}
+
+.fieldsets-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 35px;
+  row-gap: 10px;
+  margin-top: 15px;
+}
+
+fieldset {
+  width: auto;
+  border: 1px solid #000;
+  padding: 10px 15px;
+}
+
+fieldset legend {
+  font-weight: bold;
+  padding: 0 6px;
+}
+
+fieldset label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #007bff;
+}
+
+.nameInput {
+  width: 250px;
+  height: 30px;
+  padding: 5px 10px;
+}
+
+.membershipDuration {
+  width: 250px;
+  height: 35px;
+  padding: 5px 10px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
