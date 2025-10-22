@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membership Fee Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Membership Fee Calculator</h3>
+
+      <!-- Form -->
+      <form action="process-order.php" method="post">
+        <label>
+          Customer Name:
+          <input type="text" class="name-input" name="name-input" size="50" />
+        </label>
+
+        <!-- fieldsets-container -->
+        <div class="fieldsets-container">
+          <!-- Membership type box -->
+          <fieldset>
+            <legend>Type of Membership</legend>
+
+            <label>
+              <input type="radio" name="membership" value="adult" />
+              Standard Adult
+            </label>
+
+            <label>
+              <input type="radio" name="membership" value="child" />
+              Child (age 12 and under)
+            </label>
+
+            <label>
+              <input type="radio" name="membership" value="student" />
+              Student
+            </label>
+
+            <label>
+              <input type="radio" name="membership" value="senior" />
+              Senior citizen (age 65 and over)
+            </label>
+          </fieldset>
+
+          <!-- Options box -->
+          <fieldset>
+            <legend>Options</legend>
+
+            <label>
+              <input type="checkbox" name="options" value="yoga" />
+              Yoga
+            </label>
+
+            <label>
+              <input type="checkbox" name="options" value="karate" />
+              Karate
+            </label>
+
+            <label>
+              <input type="checkbox" name="options" value="personal-trainer" />
+              Personal Trainer
+            </label>
+          </fieldset>
+
+          <!-- Membership length-box -->
+          <fieldset>
+            <legend>Membership Length</legend>
+
+            <label>
+              <input type="text" class="membership-length-input" />
+            </label>
+          </fieldset>
+        </div>
+
+        <!-- Buttons -->
+        <div class="btn-container">
+          <button type="submit">Submit Form</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
