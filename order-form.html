@@ -14,7 +14,13 @@
       <form action="process-order.php" method="post">
         <label>
           Customer Name:
-          <input type="text" class="nameInput" name="nameInput" size="50" />
+          <input
+            type="text"
+            class="nameInput"
+            name="nameInput"
+            size="50"
+            required
+          />
         </label>
 
         <!-- fieldsets-container -->
@@ -24,22 +30,22 @@
             <legend>Type of Membership</legend>
 
             <label>
-              <input type="radio" name="membership" value="adult" />
+              <input type="radio" name="membership" value="adult" required />
               Standard Adult
             </label>
 
             <label>
-              <input type="radio" name="membership" value="child" />
+              <input type="radio" name="membership" value="child" required />
               Child (age 12 and under)
             </label>
 
             <label>
-              <input type="radio" name="membership" value="student" />
+              <input type="radio" name="membership" value="student" required />
               Student
             </label>
 
             <label>
-              <input type="radio" name="membership" value="senior" />
+              <input type="radio" name="membership" value="senior" required />
               Senior citizen (age 65 and over)
             </label>
           </fieldset>
@@ -69,7 +75,7 @@
             <legend>Membership Length</legend>
 
             <label>
-              <input type="number" class="membershipDuration" />
+              <input type="number" class="membershipDuration" required />
             </label>
           </fieldset>
         </div>
