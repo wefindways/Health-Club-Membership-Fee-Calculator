@@ -54,6 +54,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Order Summary - Membership Fee Calculator</title>
+  <link rel="stylesheet" href="process.css">
 </head>
 <body>
   <p>Customer Name: <strong><?= htmlspecialchars($nameInput) ?></strong></p>
@@ -62,15 +63,15 @@
   <p>Optional Membership</p>
   <ul>
     <?php if($yoga): ?>
-      <li><?= htmlspecialchars($yoga) ?> ($ 10.00 / Month)</li>
+      <li><?= htmlspecialchars($yoga) ?> ($10.00 / Month)</li>
     <?php endif; ?>
 
     <?php if($karate): ?>
-      <li><?= htmlspecialchars($karate) ?> ($ 30.00 / Month)</li>
+      <li><?= htmlspecialchars($karate) ?> ($30.00 / Month)</li>
     <?php endif; ?>
 
     <?php if($personalTrainer): ?>
-      <li><?= htmlspecialchars($personalTrainer) ?> ($ 50.00 / Month)</li>
+      <li><?= htmlspecialchars($personalTrainer) ?> ($50.00 / Month)</li>
     <?php endif; ?>
   </ul>
 
