@@ -63,30 +63,32 @@
       exit;
     }   
   ?>
-  <p>Customer Name: <strong><?= htmlspecialchars($nameInput) ?></strong></p>
-  <p>Membership: <strong><?= ucfirst(htmlspecialchars($membership)) ?></strong></p>
+  <div class="container">
+    <p>Customer Name: <strong><?= htmlspecialchars($nameInput) ?></strong></p>
+      <p>Membership: <strong><?= ucfirst(htmlspecialchars($membership)) ?></strong></p>
 
-  <p>Optional Membership</p>
-  <ul>
-    <?php if($yoga): ?>
-      <li>Yoga ($10.00 / Month)</li>
-    <?php endif; ?>
+      <p>Optional Membership</p>
+      <ul>
+        <?php if($yoga): ?>
+          <li>Yoga ($10.00 / Month)</li>
+        <?php endif; ?>
 
-    <?php if($karate): ?>
-      <li>Karate ($30.00 / Month)</li>
-    <?php endif; ?>
+        <?php if($karate): ?>
+          <li>Karate ($30.00 / Month)</li>
+        <?php endif; ?>
 
-    <?php if($personalTrainer): ?>
-      <li>Personal Trainer ($50.00 / Month)</li>
-    <?php endif; ?>
-    
-    <?php if(!$yoga && !$karate && !$personalTrainer): ?>
-      <li>None</li>
-    <?php endif; ?> 
+        <?php if($personalTrainer): ?>
+          <li>Personal Trainer ($50.00 / Month)</li>
+        <?php endif; ?>
+        
+        <?php if(!$yoga && !$karate && !$personalTrainer): ?>
+          <li>None</li>
+        <?php endif; ?> 
 
-  </ul>
+      </ul>
 
-  <p>MONTHLY FEE: <?= FormatCurrency($monthlyFee) ?></p>
-  <p>TOTAL: <?= FormatCurrency($total) ?></p>
+    <p>MONTHLY FEE: <?= FormatCurrency($monthlyFee) ?></p>
+    <p>TOTAL: <?= FormatCurrency($total) ?></p>
+  </div> 
 </body>
 </html>
