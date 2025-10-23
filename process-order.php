@@ -64,20 +64,20 @@
     }   
   ?>
   <p>Customer Name: <strong><?= htmlspecialchars($nameInput) ?></strong></p>
-  <p>Membership: <strong><?= htmlspecialchars($membership) ?></strong></p>
+  <p>Membership: <strong><?= ucfirst(htmlspecialchars($membership)) ?></strong></p>
 
   <p>Optional Membership</p>
   <ul>
     <?php if($yoga): ?>
-      <li><?= htmlspecialchars($yoga) ?> ($10.00 / Month)</li>
+      <li>Yoga ($10.00 / Month)</li>
     <?php endif; ?>
 
     <?php if($karate): ?>
-      <li><?= htmlspecialchars($karate) ?> ($30.00 / Month)</li>
+      <li>Karate ($30.00 / Month)</li>
     <?php endif; ?>
 
     <?php if($personalTrainer): ?>
-      <li><?= htmlspecialchars($personalTrainer) ?> ($50.00 / Month)</li>
+      <li>Personal Trainer ($50.00 / Month)</li>
     <?php endif; ?>
   </ul>
 
