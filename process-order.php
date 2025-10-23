@@ -57,21 +57,27 @@
   <link rel="stylesheet" href="process.css">
 </head>
 <body>
+  <?php 
+    if($membershipDuration < 1 || $membershipDuration > 24) {
+      echo '<script>alert("Membership duration must be between 1 and 24 months"); window.history.back();</script>';
+      exit;
+    }   
+  ?>
   <p>Customer Name: <strong><?= htmlspecialchars($nameInput) ?></strong></p>
-  <p>Membership: <strong><?= htmlspecialchars($membership) ?></strong></p>
+  <p>Membership: <strong><?= ucfirst(htmlspecialchars($membership)) ?></strong></p>
 
   <p>Optional Membership</p>
   <ul>
     <?php if($yoga): ?>
-      <li><?= htmlspecialchars($yoga) ?> ($10.00 / Month)</li>
+      <li>Yoga ($10.00 / Month)</li>
     <?php endif; ?>
 
     <?php if($karate): ?>
-      <li><?= htmlspecialchars($karate) ?> ($30.00 / Month)</li>
+      <li>Karate ($30.00 / Month)</li>
     <?php endif; ?>
 
     <?php if($personalTrainer): ?>
-      <li><?= htmlspecialchars($personalTrainer) ?> ($50.00 / Month)</li>
+      <li>Personal Trainer ($50.00 / Month)</li>
     <?php endif; ?>
     
     <?php if(!$yoga && !$karate && !$personalTrainer): ?>
