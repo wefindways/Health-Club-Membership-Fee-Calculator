@@ -79,6 +79,10 @@
     <?php if($personalTrainer): ?>
       <li>Personal Trainer ($50.00 / Month)</li>
     <?php endif; ?>
+
+    <?php if(!$yoga && !$karate && !$personalTrainer): ?>
+      <li>None</li>
+    <?php endif; ?> 
   </ul>
 
   <p>MONTHLY FEE: <?= FormatCurrency($monthlyFee) ?></p>
